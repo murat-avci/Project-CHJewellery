@@ -1,0 +1,15 @@
+root: true
+
+env: {
+  "browser": true,
+  "es6": true,
+  "node": true
+}
+
+rules:
+  no-invalid-this: "off"
+
+extends:
+  "htmlacademy/es5"
+
+

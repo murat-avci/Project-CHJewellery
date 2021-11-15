@@ -1,0 +1,24 @@
+@mixin font_poppins($size, $line_height, $weight, $color) {
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+  font-size: $size;
+  line-height: $line_height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font_cormorant($size, $line_height, $weight, $color) {
+  font-family: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line_height;
+  color: $color;
+}
+
+@mixin font_cormorant_italic($size, $line_height, $weight, $color) {
+  font-family: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line_height;
+  font-style: italic;
+  color: $color;
+}
