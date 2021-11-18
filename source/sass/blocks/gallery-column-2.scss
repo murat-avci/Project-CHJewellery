@@ -1,0 +1,28 @@
+.gallery-column-2 {
+  margin-right: 27px;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-right: 16px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-right: 0;
+  }
+}
+
+.gallery-column-2__item:first-child img {
+  width: 399px;
+  height: 412px;
+  object-fit: cover;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 231px;
+    height: 240px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 133px;
+    height: 247px;
+    margin-bottom: 27px;
+  }
+}

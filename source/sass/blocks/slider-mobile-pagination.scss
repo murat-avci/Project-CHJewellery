@@ -1,0 +1,19 @@
+
+.slider-mobile-pagination {
+  display: none;
+
+  @include font_poppins(16px, 21px, 500, $dark-1d);
+
+  @media (max-width: $tablet-breakpoint) {
+    position: absolute;
+    right: 0;
+    bottom: 71px;
+    left: 0;
+    display: block;
+    text-align: center;
+
+    @media (max-width: $tablet-breakpoint) {
+      bottom: 30px;
+    }
+  }
+}

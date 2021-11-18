@@ -1,0 +1,107 @@
+.socials {
+  flex-basis: 123px;
+  margin: 0 0 10px auto;
+  padding: 2px 0 0 0;
+  list-style: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0 0 10px 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    display: flex;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 7px 0;
+  }
+}
+
+.socials__item {
+  margin-bottom: 12px;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-right: 18px;
+  }
+}
+
+.socials__item:first-child {
+  @media (max-width: $tablet-breakpoint) {
+    margin-left: -9px;
+  }
+}
+
+.socials__item a {
+  display: flex;
+  align-items: center;
+
+  @include font_poppins(16px, 21px, 500, $basic-light);
+}
+
+.socials__item span {
+  @media (max-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.socials__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0;
+  }
+}
+
+.socials__icon svg {
+  margin-bottom: 2px;
+  margin-left: 4px;
+  fill: $basic-light;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0;
+  }
+}
+
+.socials__icon--fb svg {
+  width: 8px;
+  height: 15px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 12px;
+    height: 21px;
+  }
+}
+
+.socials__icon--in svg {
+  width: 15px;
+  height: 15px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.socials__icon--pn svg {
+  width: 16px;
+  height: 15px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.socials__icon--tw svg {
+  width: 15px;
+  height: 13px;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 20px;
+    height: 18px;
+  }
+}

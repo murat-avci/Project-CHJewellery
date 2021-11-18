@@ -1,0 +1,89 @@
+.intro {
+  position: relative;
+  background-color: $dark-brown;
+  box-shadow: 0 4px 4px $intro-shadow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $intro-back;
+  }
+}
+
+.intro__img-wrapper {
+  width: 100%;
+  height: 463px;
+
+  &--catalog {
+    height: 261px;
+  }
+}
+
+.intro__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro__text-wrapper {
+  position: absolute;
+  top: 182px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-breakpoint) {
+    top: 189px;
+  }
+
+  &--catalog {
+    top: 91px;
+
+    @media (max-width: $tablet-breakpoint) {
+      top: 78px;
+      padding: 0 20px;
+    }
+  }
+}
+
+.intro h2 {
+  margin: 0 0 -7px 0;
+  text-align: center;
+  letter-spacing: 1.4px;
+
+  @include font_cormorant(45px, 58px, 700, $basic-light);
+
+  @media (max-width: $tablet-breakpoint) {
+    letter-spacing: 1.1px;
+
+    @include font_cormorant(38px, 49px, 700, $basic-light);
+  }
+}
+
+.intro--catalog h2 {
+  margin: 0 0 4px 0;
+  letter-spacing: 0;
+
+  @include font_cormorant(34px, 44px, 700, $basic-light);
+}
+
+.intro p {
+  margin: 0 0 20px 0;
+  text-align: center;
+
+  @include font_cormorant_italic(38px, 49px, 400, $basic-light);
+
+  @media (max-width: $tablet-breakpoint) {
+    @include font_cormorant_italic(34px, 44px, 400, $basic-light);
+  }
+}
+
+.intro--catalog p {
+  @include font_cormorant_italic(22px, 26px, 500, $basic-light);
+}

@@ -1,1 +1,5 @@
-source/js/vendor.js
+/.git
+/.vscode
+/.ssh
+node_modules
+source/js/swiper-bundle.js

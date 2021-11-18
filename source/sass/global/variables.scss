@@ -32,3 +32,9 @@ $font-enlarge-menu: rgba($basic-light, 0.75);
 $bg-search-form: rgba($basic-light, 0.15);
 
 $container-max-width: $desktop-max-width + 2 * $mobile_padding;
+$catalog-wrapper-max-width: $desktop-max-width + 2 * $mobile_padding + 2 * 15px;
+
+$intro-shadow: rgba($basic-dark, 0.25);
+$intro-back: rgba($dark-brown, 0.7);
+$modal-back: rgba($basic-dark, 0.8);
+$filter-shadow: rgba($basic-dark, 0.25);

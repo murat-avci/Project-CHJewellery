@@ -1,0 +1,123 @@
+.faq-list {
+  margin: 0;
+  border: 1px solid $fade-sienna;
+}
+
+.faq-list__question {
+  @include font_poppins(18px, 23px, 500, $dark-1d);
+
+  @media (max-width: $tablet-breakpoint) {
+    @include font_poppins(16px, 22px, 500, $dark-1d);
+  }
+}
+
+.faq-list__btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 43px 48px 44px 43px;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 43px 48px 44px 49px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 16px 22px 21px 24px;
+  }
+}
+
+.faq-list__btn span {
+  max-width: 70%;
+  text-align: left;
+
+  @media (max-width: $tablet-breakpoint) {
+    max-width: 87%;
+  }
+}
+
+.faq-list__icon {
+  width: 17px;
+  height: 10px;
+  margin-top: 6px;
+  fill: none;
+  stroke: $fade-sienna;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 23px;
+    height: 12px;
+  }
+}
+
+.faq-list__answer {
+  margin: 0;
+  padding-left: 50px;
+  border-bottom: 1px solid $fade-sienna;
+
+  @include font_poppins(16px, 21px, 400, $dark-1d);
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-left: 25px;
+
+    @include font_poppins(14px, 20px, 400, $dark-1d);
+  }
+}
+
+.faq-list__answer ul,
+.faq-list__answer p,
+.faq-list__answer ol {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-bottom: 5px;
+  }
+}
+
+.faq-list__content {
+  max-width: 55%;
+  margin-top: -36px;
+  padding-bottom: 21px;
+
+  @media (max-width: $desktop-breakpoint) {
+    max-width: 86%;
+    margin-top: -19px;
+    padding-bottom: 35px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: -7px;
+    padding-bottom: 14px;
+  }
+}
+
+.faq-list__answer:last-child {
+  border-bottom: none;
+}
+
+.faq-list__question--closed .faq-list__icon {
+  transform: rotate(-180deg);
+}
+
+.faq-list__answer--closed .faq-list__content {
+  display: none;
+}
+
+.faq-list__btn:hover .faq-list__icon,
+.faq-list__btn:focus .faq-list__icon {
+  outline: 2px solid $fade-sienna;
+  outline-offset: 3 * 4px;
+}
+
+.faq-list__btn:active .faq-list__icon {
+  opacity: 0.6;
+}

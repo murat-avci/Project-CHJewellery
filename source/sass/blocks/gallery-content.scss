@@ -1,0 +1,25 @@
+.gallery-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: $tablet-breakpoint) {
+    flex-wrap: wrap;
+    max-width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.gallery-content__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-content__item {
+  margin: 0;
+  padding: 0;
+}

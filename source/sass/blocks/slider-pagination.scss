@@ -1,0 +1,15 @@
+.slider-pagination {
+  position: absolute;
+  bottom: 72px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: $desktop-breakpoint) {
+    bottom: 50px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    display: none;
+  }
+}

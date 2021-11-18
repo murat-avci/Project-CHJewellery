@@ -1,0 +1,35 @@
+.footer {
+  background-color: $basic-dark;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 90px;
+  padding-bottom: 57px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding-top: 50px;
+    padding-bottom: 18px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-bottom: 37px;
+  }
+}
+
+.footer button:hover,
+.footer button:focus,
+.footer input:hover,
+.footer input:focus,
+.footer a[href]:hover,
+.footer a[href]:focus {
+  outline: 2px solid $fade-sienna;
+  outline-offset: 4px;
+}
+
+.footer button:active,
+.footer input:active,
+.footer a[href]:active {
+  opacity: 0.6;
+}

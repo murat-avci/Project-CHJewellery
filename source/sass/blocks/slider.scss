@@ -1,0 +1,16 @@
+.slider {
+  padding-bottom: 54px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding-bottom: 43px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-bottom: 48px;
+  }
+}
+
+.slider__slide {
+  display: flex;
+  justify-content: center;
+}
