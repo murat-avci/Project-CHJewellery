@@ -1,4 +1,5 @@
 /* eslint-disable no-invalid-this */
+// eslint-disable-next-line strict
 'use strict';
 
 (function () {
