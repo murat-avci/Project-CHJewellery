@@ -416,7 +416,10 @@
   initSignupEmailLocalStorage();
 })();
 
+// eslint-disable-next-line strict
 'use strict';
+
+const Swiper = require('swiper/swiper-bundle');
 
 (function () {
   let swiper;
@@ -428,7 +431,7 @@
   const BREAKPOINT_MOBILE = 767;
 
   function initSwiper() {
-    swiper = new window.Swiper('.swiper-main', {
+    swiper = new Swiper('.swiper-main', {
       loop: true,
       slidesPerGroup: 2,
       slidesPerView: 2,

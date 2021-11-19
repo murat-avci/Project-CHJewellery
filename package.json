@@ -5,6 +5,7 @@
   "description": "Акселератор, Проект «Jewellery» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
+    "@types/swiper": "^5.4.3",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "eslint": "4.16.0",
@@ -53,6 +54,6 @@
   },
   "dependencies": {
     "del": "^4.1.1",
-    "swiper": "^7.2.0"
+    "swiper": "^7.3.0"
   }
 }
