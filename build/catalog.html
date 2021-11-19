@@ -20,7 +20,7 @@
       <header class="header header--menu">
         <div class="container">
           <div class="header__wrapper">
-            <button class="header__btn burger-btn" type="button">
+            <button class="header__btn burger-btn" type="button" name="burger menu button">
               <svg width="25" height="18">
                 <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
               </svg>
@@ -117,14 +117,14 @@
           </div>
           <div class="container catalog__wrapper">
             <div class="filter">
-              <button class="filter__close" type="button" tabindex="1">
+              <button class="filter__close" type="button" name="filter close button" tabindex="1">
                 <svg width="32" height="32" role="img">
                   <use xlink:href="img/sprite_auto.svg#icon-close-circular"></use>
                 </svg>
               </button>
               <form class="filter__form" action="#" method="POST">
                 <fieldset class="filter__field filter-field">
-                  <button class="filter-field__toggle" type="button" tabindex="1">
+                  <button class="filter-field__toggle" type="button" name="filter toggle button" tabindex="1">
                     <span>
                       Product
                     </span>
@@ -152,7 +152,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="filter__field filter-field">
-                  <button class="filter-field__toggle" type="button" tabindex="6">
+                  <button class="filter-field__toggle" type="button" name="filter toggle button" tabindex="6">
                     <span>
                       Material
                     </span>
@@ -172,7 +172,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="filter__field filter-field">
-                  <button class="filter-field__toggle" type="button" tabindex="9">
+                  <button class="filter-field__toggle" type="button" name="filter toggle button" tabindex="9">
                     <span>
                       Collection
                     </span>
@@ -192,7 +192,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="filter__field filter-field">
-                  <button class="filter-field__toggle" type="button" tabindex="12">
+                  <button class="filter-field__toggle" type="button" name="filter toggle button" tabindex="12">
                     <span>
                       Price
                     </span>
@@ -220,8 +220,8 @@
                   </div>
                 </fieldset>
                 <div class="filter__btns">
-                  <button class="filter__btn filter__btn--submit" type="submit" tabindex="15">Apply</button>
-                  <button class="filter__btn filter__btn--reset" type="reset" tabindex="16">Clear All</button>
+                  <button class="filter__btn filter__btn--submit" type="submit" name="filter submit button" tabindex="15">Apply</button>
+                  <button class="filter__btn filter__btn--reset" type="reset" name="filter reset button" tabindex="16">Clear All</button>
                 </div>
               </form>
             </div>
@@ -437,11 +437,11 @@
                 </div>
               </div>
               <div class="catalog__slider-navigation catalog-slider-navigation">
-                <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--prev" aria-label="Previous">
+                <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--prev" name="slider previous button" aria-label="Previous">
                   Previous
                 </button>
                 <div class="slider-pagination catalog-slider-navigation__pagination"></div>
-                <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--next" aria-label="Next">
+                <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--next" name="slider next button" aria-label="Next">
                   Next
                 </button>
               </div>
@@ -462,7 +462,7 @@
               <label for="usermail">
                 <input type="email" name="usermail" id="usermail" placeholder="Your E-mail" required="">
               </label>
-              <button class="signup__btn" type="submit">
+              <button class="signup__btn" type="submit" name="signup submit button">
                 Sign Up
                 <svg class="signup__icon" width="37" height="17" role="img">
                   <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
@@ -574,7 +574,7 @@
             <a class="login__signup-link" href="#"> Don’t have an account?<span>&nbsp;&nbsp;Sign up</span>
             </a>
           </div>
-          <button type="button" class="login__close" aria-label="Закрыть модальное окно">
+          <button type="button" class="login__close" name="login close button" aria-label="Закрыть модальное окно">
             <svg width="14" height="14" role="img">
               <use xlink:href="#close"></use>
             </svg>
