@@ -2,8 +2,8 @@
 
 (function () {
   let swiperCatalog;
-  let sliderContainer = document.querySelector('.catalog__slider');
-  let sliderNavigation = document.querySelector('.catalog__slider-navigation');
+  const sliderContainer = document.querySelector('.catalog__slider');
+  const sliderNavigation = document.querySelector('.catalog__slider-navigation');
 
   function initCatalogSwiper() {
     swiperCatalog = new window.Swiper('.catalog__slider', {

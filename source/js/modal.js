@@ -1,16 +1,16 @@
 'use strict';
 
 (function () {
-  let pageBody = document.querySelector('body');
-  let modal = document.querySelector('.modal');
-  let loginLinks = document.querySelectorAll('.login-link-js');
-  let closeLoginFormBtn = document.querySelector('.login__close');
-  let activeElements = [];
-  let maxTabIndexNum;
-  let inputFocused = document.querySelector('#useremail');
+  const pageBody = document.querySelector('body');
+  const modal = document.querySelector('.modal');
+  const loginLinks = document.querySelectorAll('.login-link-js');
+  const closeLoginFormBtn = document.querySelector('.login__close');
+  const inputFocused = document.querySelector('#useremail');
   const BODY_OVERFLOW = 'body--overflow';
   const MODAL_OPENED = 'modal--opened';
   const MODAL_OVERLAY = 'modal';
+  let activeElements = [];
+  let maxTabIndexNum;
 
   function findModalElements() {
     let elements = modal.querySelectorAll('*');

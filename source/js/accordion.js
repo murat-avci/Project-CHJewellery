@@ -1,7 +1,5 @@
-'use strict';
-
 (function () {
-  let accordionBlock = document.querySelector('.faq-list');
+  const accordionBlock = document.querySelector('.faq-list');
   const ACCORDION_TOGGLE_CLASS = 'faq-list__btn';
   const ACCORDION_ANSWER_CLASS = 'faq-list__answer';
   const ACCORDION_QUESTION_CLASS = 'faq-list__question';

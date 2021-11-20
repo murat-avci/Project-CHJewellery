@@ -2,10 +2,10 @@
 
 (function () {
   let swiper;
-  let sliderContainer = document.querySelector('.swiper-container');
-  let paginationBlock = document.querySelector('.slider-pagination');
-  let currentDotOut = document.querySelector('.slider-mobile-pagination__current');
-  let totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
+  const sliderContainer = document.querySelector('.swiper-container');
+  const paginationBlock = document.querySelector('.slider-pagination');
+  const currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+  const totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
   const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   const BREAKPOINT_MOBILE = 767;
 

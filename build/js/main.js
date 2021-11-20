@@ -1,7 +1,5 @@
-'use strict';
-
 (function () {
-  let accordionBlock = document.querySelector('.faq-list');
+  const accordionBlock = document.querySelector('.faq-list');
   const ACCORDION_TOGGLE_CLASS = 'faq-list__btn';
   const ACCORDION_ANSWER_CLASS = 'faq-list__answer';
   const ACCORDION_QUESTION_CLASS = 'faq-list__question';
@@ -55,9 +53,9 @@
 'use strict';
 
 (function () {
-  let filterBlock = document.querySelector('.filter');
-  let closeFilterBtn = document.querySelector('.filter__close');
-  let openFilterBtn = document.querySelector('.catalog__filter-link');
+  const filterBlock = document.querySelector('.filter');
+  const closeFilterBtn = document.querySelector('.filter__close');
+  const openFilterBtn = document.querySelector('.catalog__filter-link');
   const FILTER_OPENED = 'filter--opened';
 
   function initFilter() {
@@ -101,8 +99,8 @@
 
 (function () {
   let swiperCatalog;
-  let sliderContainer = document.querySelector('.catalog__slider');
-  let sliderNavigation = document.querySelector('.catalog__slider-navigation');
+  const sliderContainer = document.querySelector('.catalog__slider');
+  const sliderNavigation = document.querySelector('.catalog__slider-navigation');
 
   function initCatalogSwiper() {
     swiperCatalog = new window.Swiper('.catalog__slider', {
@@ -135,14 +133,14 @@
 'use strict';
 
 (function () {
-  let accordionBlock = document.querySelector('.filter__form');
+  const accordionBlock = document.querySelector('.filter__form');
   const FIELD_CLASS = 'filter-field';
   const TOGGLE_CLASS = 'filter-field__toggle';
   const FIELD_CLOSED_CLASS = 'filter-field--closed';
 
   if (accordionBlock) {
-    let accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
-    let accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
+    const accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
+    const accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
     if (accordionToggles && accordionFields) {
       initAccordion(accordionFields, accordionToggles);
     }
@@ -167,7 +165,7 @@
 'use strict';
 
 (function () {
-  let loginUserEmail = document.querySelector('#useremail');
+  const loginUserEmail = document.querySelector('#useremail');
   const USER_EMAIL_KEY = 'usermail';
 
   function inputLoginEmailBlurHandler() {
@@ -186,10 +184,10 @@
 
 (function () {
   let swiper;
-  let sliderContainer = document.querySelector('.swiper-container');
-  let paginationBlock = document.querySelector('.slider-pagination');
-  let currentDotOut = document.querySelector('.slider-mobile-pagination__current');
-  let totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
+  const sliderContainer = document.querySelector('.swiper-container');
+  const paginationBlock = document.querySelector('.slider-pagination');
+  const currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+  const totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
   const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   const BREAKPOINT_MOBILE = 767;
 
@@ -311,12 +309,14 @@
   const NAVBAR_JS = 'navbar--js';
   const BURGER_BTN_JS = 'burger-btn--js';
   const BURGER_BTN_MENU = 'burger-btn--menu';
-  let burgerBtn = document.querySelector('.burger-btn');
-  let header = document.querySelector('.header');
-  let logo = document.querySelector('.logo');
-  let searchForm = document.querySelector('.search-form');
-  let cartLink = document.querySelector('.cart-link');
-  let navbar = document.querySelector('.navbar');
+  const IS_MENU_OPEN = 'is-menu-open';
+  const burgerBtn = document.querySelector('.burger-btn');
+  const header = document.querySelector('.header');
+  const logo = document.querySelector('.logo');
+  const searchForm = document.querySelector('.search-form');
+  const cartLink = document.querySelector('.cart-link');
+  const navbar = document.querySelector('.navbar');
+  const bodyWrapper = document.querySelector('.body-wrapper');
 
   function initMenu() {
     if (burgerBtn) {
@@ -353,6 +353,7 @@
 
   function burgerBtnClickHandler() {
     if (burgerBtn) {
+      bodyWrapper.classList.toggle(IS_MENU_OPEN);
       burgerBtn.classList.toggle(BURGER_BTN_MENU);
     }
 
@@ -381,16 +382,16 @@
 'use strict';
 
 (function () {
-  let pageBody = document.querySelector('body');
-  let modal = document.querySelector('.modal');
-  let loginLinks = document.querySelectorAll('.login-link-js');
-  let closeLoginFormBtn = document.querySelector('.login__close');
-  let activeElements = [];
-  let maxTabIndexNum;
-  let inputFocused = document.querySelector('#useremail');
+  const pageBody = document.querySelector('body');
+  const modal = document.querySelector('.modal');
+  const loginLinks = document.querySelectorAll('.login-link-js');
+  const closeLoginFormBtn = document.querySelector('.login__close');
+  const inputFocused = document.querySelector('#useremail');
   const BODY_OVERFLOW = 'body--overflow';
   const MODAL_OPENED = 'modal--opened';
   const MODAL_OVERLAY = 'modal';
+  let activeElements = [];
+  let maxTabIndexNum;
 
   function findModalElements() {
     let elements = modal.querySelectorAll('*');
@@ -511,7 +512,7 @@
 'use strict';
 
 (function () {
-  let signupUserEmail = document.querySelector('#usermail');
+  const signupUserEmail = document.querySelector('#usermail');
   const USER_EMAIL_KEY = 'usermail';
 
   function inputSignupEmailBlurHandler() {

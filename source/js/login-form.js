@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  let loginUserEmail = document.querySelector('#useremail');
+  const loginUserEmail = document.querySelector('#useremail');
   const USER_EMAIL_KEY = 'usermail';
 
   function inputLoginEmailBlurHandler() {

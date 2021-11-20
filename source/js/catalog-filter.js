@@ -1,9 +1,9 @@
 'use strict';
 
 (function () {
-  let filterBlock = document.querySelector('.filter');
-  let closeFilterBtn = document.querySelector('.filter__close');
-  let openFilterBtn = document.querySelector('.catalog__filter-link');
+  const filterBlock = document.querySelector('.filter');
+  const closeFilterBtn = document.querySelector('.filter__close');
+  const openFilterBtn = document.querySelector('.catalog__filter-link');
   const FILTER_OPENED = 'filter--opened';
 
   function initFilter() {

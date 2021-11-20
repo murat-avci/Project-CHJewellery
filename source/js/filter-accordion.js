@@ -1,14 +1,14 @@
 'use strict';
 
 (function () {
-  let accordionBlock = document.querySelector('.filter__form');
+  const accordionBlock = document.querySelector('.filter__form');
   const FIELD_CLASS = 'filter-field';
   const TOGGLE_CLASS = 'filter-field__toggle';
   const FIELD_CLOSED_CLASS = 'filter-field--closed';
 
   if (accordionBlock) {
-    let accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
-    let accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
+    const accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
+    const accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
     if (accordionToggles && accordionFields) {
       initAccordion(accordionFields, accordionToggles);
     }
