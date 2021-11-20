@@ -8,12 +8,10 @@
   width: 230px;
   height: 230px;
   object-fit: cover;
-  margin-bottom: 34px;
 
   @media (max-width: $desktop-breakpoint) {
     width: 133px;
     height: 133px;
-    margin-bottom: 21px;
   }
 
   @media (max-width: $tablet-breakpoint) {
@@ -26,9 +24,11 @@
   width: 230px;
   height: 150px;
   object-fit: cover;
+  margin-top: 34px;
 
   @media (max-width: $desktop-breakpoint) {
     width: 133px;
     height: 87px;
+    margin-top: 21px;
   }
 }

@@ -26,3 +26,16 @@
     margin-bottom: 27px;
   }
 }
+
+.gallery-column-2__item:nth-child(2n) img,
+.gallery-column-2__item:nth-child(2n-1):not(:first-child) img {
+  margin-top: 34px;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 27px;
+  }
+}
