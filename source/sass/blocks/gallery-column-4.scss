@@ -31,4 +31,8 @@
     height: 87px;
     margin-top: 21px;
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 0;
+  }
 }
