@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
 
-  @include font_poppins(16px, 21px, 500, $basic-light);
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
 }
 
 .socials__item span {
@@ -59,7 +59,7 @@
 .socials__icon svg {
   margin-bottom: 2px;
   margin-left: 4px;
-  fill: $basic-light;
+  fill: $socials-icon-color;
 
   @media (max-width: $tablet-breakpoint) {
     margin: 0;

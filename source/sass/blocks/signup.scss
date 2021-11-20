@@ -13,7 +13,7 @@
   padding: 0;
   letter-spacing: 0.8px;
 
-  @include font_cormorant(34px, 44px, 700, $basic-light);
+  @include font_cormorant(34px, 44px, 700, $font-basic-light);
 
   @media (max-width: $tablet-breakpoint) {
     margin: 0 0 13px 0;
@@ -25,7 +25,7 @@
   margin: 0 0 34px 0;
   padding: 0;
 
-  @include font_poppins(16px, 21px, 400, $dark-grey);
+  @include font_poppins(16px, 21px, 400, $font-dark-grey);
 
   @media (max-width: $desktop-breakpoint) {
     margin: 0 0 35px 0;
@@ -41,7 +41,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 4px 0 4px 0;
-  border-bottom: 1px solid $basic-light;
+  border-bottom: 1px solid $signup-form-border;
 
   @media (max-width: $desktop-breakpoint) {
     max-width: 560px;
@@ -60,14 +60,14 @@
 .signup__form input {
   width: 100%;
   padding: 5px 0;
-  background-color: transparent;
+  background-color: $signup-form-back;
   border: none;
   border-radius: 0;
 
-  @include font_poppins(14px, 21px, 500, $basic-light);
+  @include font_poppins(14px, 21px, 500, $font-basic-light);
 
   &::placeholder {
-    @include font_poppins(14px, 21px, 500, $dark-grey);
+    @include font_poppins(14px, 21px, 500, $font-dark-grey);
   }
 }
 
@@ -75,10 +75,10 @@
   display: flex;
   align-items: center;
   padding: 5px 0;
-  background-color: transparent;
+  background-color: $signup-form-back;
   border: none;
 
-  @include font_poppins(16px, 21px, 500, $basic-light);
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
 
   &:hover {
     cursor: pointer;
@@ -89,5 +89,5 @@
   width: 30px;
   height: 17px;
   margin-left: 12px;
-  stroke: $basic-light;
+  stroke: $signup-form-icon-color;
 }

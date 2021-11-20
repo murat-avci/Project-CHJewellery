@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   width: 430px;
-  background-color: $light-grey;
+  background-color: $login-back;
   transform: translate(-50%, -50%);
 
   @media (max-width: $desktop-breakpoint) {
@@ -42,11 +42,10 @@
   text-align: center;
   letter-spacing: 0;
 
-  @include font_cormorant(34px, 44px, 700, $dark-1d);
+  @include font_cormorant(34px, 44px, 700, $font-dark);
 
   @media (max-width: $tablet-breakpoint) {
     margin-bottom: 18px;
-
     font-size: 24px;
     line-height: 31px;
   }
@@ -82,13 +81,13 @@
   padding: 8px 0 8px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $dark-1d;
+  border-bottom: 1px solid $login-input-border;
   border-radius: 0;
 
-  @include font_poppins(14px, 21px, 500, $dark-1d);
+  @include font_poppins(14px, 21px, 500, $font-dark);
 
   &::placeholder {
-    @include font_poppins(14px, 21px, 500, $dark-grey);
+    @include font_poppins(14px, 21px, 500, $font-dark-grey);
   }
 }
 
@@ -104,11 +103,11 @@
   margin-top: 40px;
   margin-bottom: 14px;
   padding: 24px 20px 23px 20px;
-  background-color: $fade-sienna;
+  background-color: $login-form-btn-back;
   border: none;
   cursor: pointer;
 
-  @include font_poppins(16px, 21px, 500, $basic-light);
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
 
   @media (max-width: $tablet-breakpoint) {
     margin-top: 30px;
@@ -123,17 +122,17 @@
   align-self: flex-end;
   padding: 5px 0;
 
-  @include font_poppins(12px, 18px, 500, $dark-grey);
+  @include font_poppins(12px, 18px, 500, $font-dark-grey);
 }
 
 .login__signup-link {
   text-align: center;
 
-  @include font_poppins(14px, 21px, 500, $dark-grey);
+  @include font_poppins(14px, 21px, 500, $font-dark-grey);
 }
 
 .login__signup-link span {
-  color: $dark-1d;
+  color: $font-dark;
 }
 
 .login__close {
@@ -154,7 +153,7 @@
 .login__close svg {
   width: 14px;
   height: 14px;
-  fill: $dark-1d;
+  fill: $login-form-close-icon;
 
   @media (max-width: $desktop-breakpoint) {
     width: 20px;
@@ -169,28 +168,28 @@
 
 .login__close:hover,
 .login__close:focus {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 2px;
+  outline: 2px solid $hover-outline;
+  outline-offset: 0.5 * $hover-outline-offset;
 }
 
 .login input:focus {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 2px;
+  outline: 2px solid $hover-outline;
+  outline-offset: 0.5 * $hover-outline-offset;
 }
 
 .login button:active,
 .login input:active,
 .login a[href]:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }
 
 .login a[href]:focus {
-  outline: 2px solid $fade-sienna;
+  outline: 2px solid $hover-outline;
   outline-offset: 0;
 }
 
 .login__btn:hover,
 .login__btn:focus {
-  outline: 2px solid $basic-light;
-  outline-offset: -8px;
+  outline: 2px solid $hover-outline-light;
+  outline-offset: -2 * $hover-outline-offset;
 }

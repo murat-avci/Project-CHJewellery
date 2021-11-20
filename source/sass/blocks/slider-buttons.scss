@@ -30,7 +30,7 @@
 .slider-buttons__item svg {
   width: 37px;
   height: 17px;
-  stroke: $fade-sienna;
+  stroke: $slider-icon;
 }
 
 .slider-buttons__item--prev {
@@ -43,10 +43,10 @@
 
 .slider-buttons__item:focus,
 .slider-buttons__item:hover {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 4px;
+  outline: 2px solid $slider-btns-outline;
+  outline-offset: $hover-outline-offset;
 }
 
 .slider-buttons__item:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }

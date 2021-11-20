@@ -1,8 +1,8 @@
 .logo svg {
   width: 66px;
   height: 66px;
-  fill: $fade-sienna;
-  stroke: $fade-sienna;
+  fill: $logo-color;
+  stroke: $logo-color;
 
   @media (max-width: $desktop-breakpoint) {
     margin-left: -5px;
@@ -16,7 +16,7 @@
 
 .logo--menu svg {
   @media (max-width: $desktop-breakpoint) {
-    fill: $basic-light;
-    stroke: $basic-light;
+    fill: $logo-color-menu;
+    stroke: $logo-color-menu;
   }
 }

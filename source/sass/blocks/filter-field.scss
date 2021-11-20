@@ -4,17 +4,14 @@
   margin-right: 0;
   margin-left: 0;
   padding: 13px 25px 13px 25px;
-
-  border: 1px solid $fade-sienna;
+  border: 1px solid $filter-border;
 
   @media (max-width: $desktop-breakpoint) {
     padding: 24px 40px 22px 22px;
-
     border-top: none;
     border-right: none;
     border-left: none;
   }
-
 
   @media (max-width: $tablet-breakpoint) {
     padding: 13px 20px 15px 20px;
@@ -23,9 +20,9 @@
 
 .filter-field:nth-child(n + 2) {
   border: none;
-  border-right: 1px solid $fade-sienna;
-  border-bottom: 1px solid $fade-sienna;
-  border-left: 1px solid $fade-sienna;
+  border-right: 1px solid $filter-border;
+  border-bottom: 1px solid $filter-border;
+  border-left: 1px solid $filter-border;
 
   @media (max-width: $desktop-breakpoint) {
     border-right: none;
@@ -36,7 +33,6 @@
 .filter-field--closed svg {
   transform: rotate(-180deg);
 }
-
 
 .filter-field--closed .filter-field__point {
   display: none;
@@ -50,12 +46,11 @@
   padding-right: 0;
   padding-bottom: 10px;
   padding-left: 0;
-
   background-color: transparent;
   border: none;
   cursor: pointer;
 
-  @include font_poppins(16px, 21px, 500, $dark-1d);
+  @include font_poppins(16px, 21px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
     font-size: 18px;
@@ -65,20 +60,19 @@
 
 .filter-field__toggle:hover,
 .filter-field__toggle:focus {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 4px;
+  outline: 2px solid $hover-outline;
+  outline-offset: 1 * $hover-outline-offset;
 }
 
 .filter-field__toggle:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }
 
 .filter-field__toggle svg {
   width: 15px;
   height: 8px;
-
   fill: none;
-  stroke: $fade-sienna;
+  stroke: $accordion-icon;
 
   @media (max-width: $desktop-breakpoint) {
     width: 23px;

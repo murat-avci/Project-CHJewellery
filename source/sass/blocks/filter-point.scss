@@ -25,11 +25,10 @@
   padding-left: 10px;
   cursor: pointer;
 
-  @include font_poppins(14px, 18px, 500, $dark-1d);
+  @include font_poppins(14px, 18px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
     margin-bottom: 17px;
-
     font-size: 16px;
     line-height: 21px;
   }
@@ -40,7 +39,7 @@
     width: 15px;
     height: 15px;
     margin-right: 10px;
-    border: 1px solid $fade-sienna;
+    border: 1px solid $filter-border;
 
     @media (max-width: $desktop-breakpoint) {
       width: 18px;
@@ -50,21 +49,21 @@
 }
 
 .filter-point__input:hover label::before {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 4px;
+  outline: 2px solid $hover-outline;
+  outline-offset: 1 * $hover-outline-offset;
 }
 
 .filter-point__input:active label::before {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }
 
 .filter-point__input input[type="checkbox"]:checked + label::before {
-  background-color: $fade-sienna;
+  background-color: $filter-btn;
 }
 
 .filter-point__input input[type="checkbox"]:focus + label::before {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 4px;
+  outline: 2px solid $hover-outline;
+  outline-offset: 1 * $hover-outline-offset;
 }
 
 .filter-field input {

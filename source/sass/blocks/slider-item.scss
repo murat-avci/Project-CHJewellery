@@ -13,8 +13,8 @@
 }
 
 .slider-item img {
-  width: 100%;
-  height: auto;
+  width: 270px;
+  height: 284px;
   margin-bottom: 17px;
   object-fit: cover;
 
@@ -34,13 +34,13 @@
   margin: 0 0 7px 0;
   text-align: center;
 
-  @include font_poppins(16px, 21px, 500, $dark-1d);
+  @include font_poppins(16px, 21px, 500, $font-dark);
 }
 
 .slider-item:focus,
 .slider-item:hover {
-  outline: 2px solid $fade-sienna;
-  outline-offset: -0.5 * 4px;
+  outline: 2px solid $hover-outline;
+  outline-offset: -0.5 * $hover-outline-offset;
 }
 
 .slider-item__price {
@@ -53,5 +53,5 @@
 }
 
 .slider-item__price span {
-  @include font_poppins(14px, 18px, 700, $dark-1d);
+  @include font_poppins(14px, 18px, 700, $font-dark);
 }

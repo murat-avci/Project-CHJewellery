@@ -2,4 +2,5 @@
 /.vscode
 /.ssh
 node_modules
-source/js/swiper-bundle.js
+source/js/vendor
+

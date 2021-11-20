@@ -1,5 +1,5 @@
 .footer {
-  background-color: $basic-dark;
+  background-color: $footer-back;
 }
 
 .footer__wrapper {
@@ -24,12 +24,12 @@
 .footer input:focus,
 .footer a[href]:hover,
 .footer a[href]:focus {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 4px;
+  outline: 2px solid $hover-outline;
+  outline-offset: $hover-outline-offset;
 }
 
 .footer button:active,
 .footer input:active,
 .footer a[href]:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }

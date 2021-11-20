@@ -1,26 +1,20 @@
-@import './swiper-vars.scss';
+// @import '../../swiper-vars.scss';
 
 :root {
   /*
   --swiper-pagination-color: var(--swiper-theme-color);
-  --swiper-pagination-bullet-size: 8px;
-  --swiper-pagination-bullet-width: 8px;
-  --swiper-pagination-bullet-height: 8px;
-  --swiper-pagination-bullet-inactive-color: #000;
-  --swiper-pagination-bullet-inactive-opacity: 0.2;
-  --swiper-pagination-bullet-opacity: 1;
-  --swiper-pagination-bullet-horizontal-gap: 4px;
-  --swiper-pagination-bullet-vertical-gap: 6px;
   */
 }
 
 .swiper-pagination {
   position: absolute;
   z-index: 10;
-  text-align: center;
-  transform: translate3d(0, 0, 0);
-  transition: 300ms opacity;
 
+  text-align: center;
+
+  transform: translate3d(0, 0, 0);
+
+  transition: 300ms opacity;
   &.swiper-pagination-hidden {
     opacity: 0;
   }
@@ -31,14 +25,18 @@
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 10px;
   left: 0;
+
   width: 100%;
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
   overflow: hidden;
+
   font-size: 0;
+
   .swiper-pagination-bullet {
     position: relative;
+
     transform: scale(0.33);
   }
 
@@ -71,6 +69,7 @@
   display: inline-block;
   width: 8px;
   height: 8px;
+
   background: #000000;
   border-radius: 50%;
   opacity: 0.2;
@@ -78,8 +77,10 @@
   @at-root button#{&} {
     margin: 0;
     padding: 0;
+
     border: none;
     box-shadow: none;
+
     appearance: none;
   }
 
@@ -97,6 +98,7 @@
   > .swiper-pagination-bullets {
     top: 50%;
     right: 10px;
+
     transform: translate3d(0px, -50%, 0);
 
     .swiper-pagination-bullet {
@@ -106,11 +108,14 @@
 
     &.swiper-pagination-bullets-dynamic {
       top: 50%;
+
       width: 8px;
+
       transform: translateY(-50%);
 
       .swiper-pagination-bullet {
         display: inline-block;
+
         transition: 200ms transform, 200ms top;
       }
     }
@@ -124,7 +129,9 @@
     }
     &.swiper-pagination-bullets-dynamic {
       left: 50%;
+
       white-space: nowrap;
+
       transform: translateX(-50%);
 
       .swiper-pagination-bullet {
@@ -140,14 +147,17 @@
 /* Progress */
 .swiper-pagination-progressbar {
   position: absolute;
+
   background: rgba(0, 0, 0, 0.25);
 
   .swiper-pagination-progressbar-fill {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background: var(--swiper-pagination-color, var(--swiper-theme-color));
     transform: scale(0);
     transform-origin: left top;
@@ -161,6 +171,7 @@
   .swiper-container-vertical > &.swiper-pagination-progressbar-opposite {
     top: 0;
     left: 0;
+
     width: 100%;
     height: 4px;
   }
@@ -169,6 +180,7 @@
   .swiper-container-horizontal > &.swiper-pagination-progressbar-opposite {
     top: 0;
     left: 0;
+
     width: 4px;
     height: 100%;
   }

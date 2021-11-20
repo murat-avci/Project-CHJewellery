@@ -1,0 +1,18 @@
+.section-head h2 {
+  @include font_cormorant(34px, 44px, 700, $font-dark);
+}
+
+.section-head a {
+  @include link-underline_border;
+  @include font_poppins(16px, 21px, 500, $font-dark);
+}
+
+.section-head a[href]:hover,
+.section-head a[href]:focus {
+  outline: 2px solid $hover-outline;
+  outline-offset: $hover-outline-offset;
+}
+
+.section-head a[href]:active {
+  opacity: $header-element-active-opacity;
+}

@@ -1,7 +1,4 @@
-// eslint-disable-next-line strict
 'use strict';
-
-const Swiper = require('swiper/swiper-bundle');
 
 (function () {
   let swiper;
@@ -9,18 +6,17 @@ const Swiper = require('swiper/swiper-bundle');
   let paginationBlock = document.querySelector('.slider-pagination');
   let currentDotOut = document.querySelector('.slider-mobile-pagination__current');
   let totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
-  const ACTIVE_BULLET = 'swiper-pagination-bullet-active';
+  const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   const BREAKPOINT_MOBILE = 767;
 
   function initSwiper() {
-    swiper = new Swiper('.swiper-main', {
+    swiper = new window.Swiper('.swiper-main', {
       loop: true,
       slidesPerGroup: 2,
       slidesPerView: 2,
       centeredSlides: false,
       spaceBetween: 30,
       centeredSlidesBounds: true,
-
       pagination: {
         el: document.querySelector('.slider-pagination'),
         clickable: 'true',
@@ -68,7 +64,7 @@ const Swiper = require('swiper/swiper-bundle');
   function setMobileCurrentBullet(bullets) {
     let currentBullet;
     Array.from(bullets).forEach((element) => {
-      if (element.classList.contains(ACTIVE_BULLET)) {
+      if (element.classList.contains(ACTIVE_BULLET_CLASS)) {
         currentBullet = +element.textContent;
       }
     });

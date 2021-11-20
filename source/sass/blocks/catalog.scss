@@ -32,7 +32,6 @@
   margin-right: 0;
   margin-left: 0;
 
-
   @media (max-width: $desktop-breakpoint) {
     width: 100%;
     margin-right: auto;
@@ -45,9 +44,9 @@
   margin-bottom: 49px;
   padding: 24px;
   text-align: center;
-  background-color: $fade-sienna;
+  background-color: $filter-btn;
 
-  @include font_poppins(16px, 21px, 500, $basic-light);
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
 
   @media (max-width: $desktop-breakpoint) {
     display: block;

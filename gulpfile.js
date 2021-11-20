@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 'use strict';
 
 const gulp = require('gulp');
@@ -43,7 +42,7 @@ gulp.task('server', function () {
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/*.html', gulp.series('html', 'refresh'));
-  gulp.watch('source/js/main-*.js', gulp.series('scripts', 'refresh'));
+  gulp.watch('source/js/*.js', gulp.series('scripts', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -84,6 +83,18 @@ gulp.task('html', function () {
       .pipe(gulp.dest('build'));
 });
 
+gulp.task('scripts', function () {
+  return gulp.src('source/js/*.js')
+      .pipe(concat('main.js'))
+      .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('vendor-scripts', function () {
+  return gulp.src('source/js/vendor/swiper-bundle.js')
+      .pipe(concat('vendor.js'))
+      .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
@@ -97,18 +108,6 @@ gulp.task('copy', function () {
 
 gulp.task('clean', function () {
   return del('build');
-});
-
-gulp.task('scripts', function () {
-  return gulp.src('source/js/main-*.js')
-      .pipe(concat('main.js'))
-      .pipe(gulp.dest('build/js'));
-});
-
-gulp.task('vendor-scripts', function () {
-  return gulp.src('source/js/swiper-bundle.js')
-      .pipe(concat('vendor.js'))
-      .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html', 'scripts', 'vendor-scripts'));

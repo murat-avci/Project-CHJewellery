@@ -8,9 +8,8 @@
   display: none;
   width: 20px;
   height: 18px;
-
   fill: none;
-  stroke: $dark-1d;
+  stroke: $header-icon-color;
 
   @media (max-width: $desktop-breakpoint) {
     display: block;
@@ -20,5 +19,5 @@
 }
 
 .cart-link--menu svg {
-  stroke: $basic-light;
+  stroke: $header-icon-color-menu;
 }

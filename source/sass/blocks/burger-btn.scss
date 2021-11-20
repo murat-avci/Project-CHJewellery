@@ -12,17 +12,22 @@
   }
 }
 
+.burger-btn--js:hover {
+  cursor: pointer;
+}
+
 .burger-btn--js svg {
   @media (max-width: $desktop-breakpoint) {
     display: block;
     width: 25px;
     height: 18px;
-    stroke: $dark-1d;
+
+    stroke: $header-icon-color;
   }
 }
 
 .burger-btn--menu svg {
   @media (max-width: $desktop-breakpoint) {
-    stroke: $basic-light;
+    stroke: $header-icon-color-menu;
   }
 }

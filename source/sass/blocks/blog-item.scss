@@ -22,7 +22,7 @@
   width: 285px;
   max-height: 300px;
   padding: 67px 60px;
-  background-color: $light-grey;
+  background-color: $blog-item-back;
 
   @media (max-width: $desktop-breakpoint) {
     width: 339px;
@@ -40,25 +40,27 @@
 .blog-item__text-wrapper p {
   margin: 0 0 13px 0;
 
-  @include font_poppins(14px, 18px, 500, $dark-grey);
+  @include font_poppins(14px, 18px, 500, $font-dark-grey);
 }
 
 .blog-item__text-wrapper h3 {
   margin: 0 0 37px 0;
 
-  @include font_cormorant(26px, 34px, 600, $basic-dark);
+  @include font_cormorant(26px, 34px, 600, $font-basic-dark);
 }
 
 .blog-item__text-wrapper a {
   margin: 0 0 10px 0;
 
-  @include font_poppins(16px, 21px, 500, $dark-1d);
+  @include font_poppins(16px, 21px, 500, $font-dark);
   @include link-underline_border;
 }
+
 
 .blog-item img {
   width: 285px;
   height: 300px;
+
   object-fit: cover;
 
   @media (max-width: $desktop-breakpoint) {
@@ -82,6 +84,7 @@
   }
 }
 
+
 .blog-item--large {
   position: relative;
   min-height: 630px;
@@ -95,6 +98,7 @@
 .blog-item--large img {
   width: 570px;
   height: 630px;
+
 
   @media (max-width: $desktop-breakpoint) {
     width: 339px;
@@ -116,6 +120,7 @@
 
   @media (max-width: $desktop-breakpoint) {
     position: static;
+
     width: 339px;
     max-height: 300px;
   }
@@ -128,10 +133,10 @@
 
 .blog-item a[href]:hover,
 .blog-item a[href]:focus {
-  outline: 2px solid $fade-sienna;
-  outline-offset: 4px;
+  outline: 2px solid $hover-outline;
+  outline-offset: $hover-outline-offset;
 }
 
 .blog-item a[href]:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }

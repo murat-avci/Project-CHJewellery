@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 250px;
   margin-left: 30px;
-  background-color: $basic-light;
+  background-color: $filter-back;
 
   @media (max-width: $desktop-breakpoint) {
     display: none;
@@ -51,7 +51,7 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
-  fill: $basic-light;
+  fill: $filter-close-btn;
 }
 
 .filter__btns {
@@ -69,10 +69,10 @@
 
 .filter__btn--submit {
   margin-top: 34px;
-  background-color: $fade-sienna;
+  background-color: $filter-btn;
   border: none;
 
-  @include font_poppins(16px, 21px, 500, $basic-light);
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
 
   @media (max-width: $desktop-breakpoint) {
     margin-top: 38px;
@@ -85,21 +85,20 @@
 
 .filter__btn--submit:hover,
 .filter__btn--submit:focus {
-  outline: 2px solid $basic-light;
-  outline-offset: -12px;
+  outline: 2px solid $hover-outline-light;
+  outline-offset: -3 * $hover-outline-offset;
 }
 
 .filter__btn--submit:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }
 
 .filter__btn--reset {
   margin-top: 23px;
   background-color: transparent;
-  border: 1px solid $fade-sienna;
+  border: 1px solid $filter-border;
 
-  @include font_poppins(16px, 21px, 500, $dark-1d);
-
+  @include font_poppins(16px, 21px, 500, $font-dark);
 
   @media (max-width: $tablet-breakpoint) {
     margin-top: 19px;
@@ -108,12 +107,12 @@
 
 .filter__btn--reset:hover,
 .filter__btn--reset:focus {
-  outline: 2px solid $fade-sienna;
-  outline-offset: -12px;
+  outline: 2px solid $hover-outline;
+  outline-offset: -3 * $hover-outline-offset;
 }
 
 .filter__btn--reset:active {
-  opacity: 0.6;
+  opacity: $header-element-active-opacity;
 }
 
 .filter button {

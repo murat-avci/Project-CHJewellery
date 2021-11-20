@@ -23,9 +23,9 @@
 }
 
 .nav-list__item a {
-  @include font_poppins(16px, 24px, 500, $dark-1d);
+  @include font_poppins(16px, 24px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
-    @include font_poppins(24px, 36px, 500, $basic-light);
+    @include font_poppins(24px, 36px, 500, $font-basic-light);
   }
 }

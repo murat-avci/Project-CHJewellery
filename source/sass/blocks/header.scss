@@ -5,7 +5,7 @@
     top: 114px;
     width: 100%;
     height: 1px;
-    background-color: $extra-light-grey;
+    background-color: $header-border;
 
     @media (max-width: $desktop-breakpoint) {
       display: none;
@@ -35,7 +35,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
+  width: $header-element-width;
   margin-top: -25px;
 
   @media (max-width: $desktop-breakpoint) {
@@ -57,6 +57,35 @@
 .header--menu {
   @media (max-width: $desktop-breakpoint) {
     position: relative;
-    background-color: $fade-sienna;
+
+    background-color: $header-menu-back;
+  }
+}
+
+.header button:hover,
+.header button:focus,
+.header input:hover,
+.header input:focus,
+.header a[href]:hover,
+.header a[href]:focus {
+  outline: 2px solid $hover-outline;
+  outline-offset: $hover-outline-offset;
+}
+
+.header button:active,
+.header input:active,
+.header a[href]:active {
+  opacity: $header-element-active-opacity;
+}
+
+.header--menu button:hover,
+.header--menu button:focus,
+.header--menu input:hover,
+.header--menu input:focus,
+.header--menu a[href]:hover,
+.header--menu a[href]:focus {
+  @media (max-width: $desktop-breakpoint) {
+    outline: 2px solid $hover-outline-light;
+    outline-offset: $hover-outline-offset;
   }
 }

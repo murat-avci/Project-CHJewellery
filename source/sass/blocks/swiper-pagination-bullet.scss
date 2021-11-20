@@ -9,7 +9,7 @@
   cursor: pointer;
   opacity: 1;
 
-  @include font_poppins(16px, 21px, 500, $dark-grey);
+  @include font_poppins(16px, 21px, 500, $font-dark-grey);
 
   @media (max-width: $desktop-breakpoint) {
     min-width: 23px;
@@ -17,12 +17,12 @@
 }
 
 .swiper-pagination-bullet-active {
-  color: $dark-1d;
+  color: $font-dark;
   border-radius: 0;
 }
 
 .swiper-pagination-bullet:hover,
 .swiper-pagination-bullet:focus {
-  outline: 1px solid $fade-sienna;
+  outline: 1px solid $slider-btns-outline;
   outline-offset: -2px;
 }

@@ -1,24 +1,23 @@
-/* eslint-disable no-invalid-this */
 'use strict';
 
 (function () {
-  let accordion = document.querySelector('.faq-list');
-  const ACCORDION_TOGGLE = 'faq-list__btn';
-  const ACCORDION_ANSWER = 'faq-list__answer';
-  const ACCORDION_QUESTION = 'faq-list__question';
-  const CLOSED_ANSWER = 'faq-list__answer--closed';
-  const CLOSED_QUESTION = 'faq-list__question--closed';
+  let accordionBlock = document.querySelector('.faq-list');
+  const ACCORDION_TOGGLE_CLASS = 'faq-list__btn';
+  const ACCORDION_ANSWER_CLASS = 'faq-list__answer';
+  const ACCORDION_QUESTION_CLASS = 'faq-list__question';
+  const CLOSED_ANSWER_CLASS = 'faq-list__answer--closed';
+  const CLOSED_QUESTION_CLASS = 'faq-list__question--closed';
 
-  function initAccordion(questions, answers, toggles) {
-    if (questions) {
-      questions.forEach((elem) => {
-        elem.classList.toggle(CLOSED_QUESTION);
+  function initAccordion(quesions, answers, toggles) {
+    if (quesions) {
+      quesions.forEach((elem) => {
+        elem.classList.toggle(CLOSED_QUESTION_CLASS);
       });
     }
 
     if (answers) {
       answers.forEach((elem) => {
-        elem.classList.toggle(CLOSED_ANSWER);
+        elem.classList.toggle(CLOSED_ANSWER_CLASS);
       });
     }
 
@@ -31,27 +30,25 @@
 
   function toggleClickHandler() {
     let questionNode = this.parentNode;
-    questionNode.classList.toggle(CLOSED_QUESTION);
+    questionNode.classList.toggle(CLOSED_QUESTION_CLASS);
 
     let answerNode = questionNode.nextElementSibling;
-    answerNode.classList.toggle(CLOSED_ANSWER);
+    answerNode.classList.toggle(CLOSED_ANSWER_CLASS);
 
-    let currentQuestions = accordion.querySelectorAll('.' + ACCORDION_QUESTION);
-
+    let currentQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
     currentQuestions.forEach((element) => {
-      if (questionNode !== element && !element.classList.contains(CLOSED_QUESTION)) {
-        element.classList.toggle(CLOSED_QUESTION);
-        element.nextElementSibling.classList.toggle(CLOSED_ANSWER);
+      if (questionNode !== element && !element.classList.contains(CLOSED_QUESTION_CLASS)) {
+        element.classList.toggle(CLOSED_QUESTION_CLASS);
+        element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
       }
     });
   }
 
-  if (accordion) {
-    let ACCORDION_QUESTIONS = accordion.querySelectorAll('.' + ACCORDION_QUESTION);
-    let ACCORDION_ANSWERS = accordion.querySelectorAll('.' + ACCORDION_ANSWER);
-    let ACCORDION_TOGGLES = accordion.querySelectorAll('.' + ACCORDION_TOGGLE);
-
-    initAccordion(ACCORDION_QUESTIONS, ACCORDION_ANSWERS, ACCORDION_TOGGLES);
+  if (accordionBlock) {
+    let accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
+    let accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
+    let accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
+    initAccordion(accordionQuestions, accordionAnswers, accordionToggles);
   }
 })();
 
@@ -100,7 +97,6 @@
   initFilter();
 })();
 
-/* eslint-disable no-unused-vars */
 'use strict';
 
 (function () {
@@ -136,19 +132,17 @@
   initCatalogSlider();
 })();
 
-/* eslint-disable no-invalid-this */
 'use strict';
 
 (function () {
   let accordionBlock = document.querySelector('.filter__form');
-  const FILTER_FIELD = 'filter-field';
-  const FILTER_FIELD_TOGGLE = 'filter-field__toggle';
-  const FILTER_FIELD_CLOSED = 'filter-field--closed';
+  const FIELD_CLASS = 'filter-field';
+  const TOGGLE_CLASS = 'filter-field__toggle';
+  const FIELD_CLOSED_CLASS = 'filter-field--closed';
 
   if (accordionBlock) {
-    let accordionToggles = accordionBlock.querySelectorAll('.' + FILTER_FIELD_TOGGLE);
-    let accordionFields = accordionBlock.querySelectorAll('.' + FILTER_FIELD);
-
+    let accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
+    let accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
     if (accordionToggles && accordionFields) {
       initAccordion(accordionFields, accordionToggles);
     }
@@ -156,7 +150,7 @@
 
   function initAccordion(fields, toggles) {
     fields.forEach((elem) => {
-      elem.classList.toggle(FILTER_FIELD_CLOSED);
+      elem.classList.toggle(FIELD_CLOSED_CLASS);
     });
 
     toggles.forEach((elem) => {
@@ -166,8 +160,7 @@
 
   function toggleClickHandler() {
     let currentField = this.parentNode;
-
-    currentField.classList.toggle(FILTER_FIELD_CLOSED);
+    currentField.classList.toggle(FIELD_CLOSED_CLASS);
   }
 })();
 
@@ -186,27 +179,144 @@
       loginUserEmail.addEventListener('blur', inputLoginEmailBlurHandler);
     }
   }
-
   initLoginEmailLocalStorage();
 })();
 
 'use strict';
 
 (function () {
+  let swiper;
+  let sliderContainer = document.querySelector('.swiper-container');
+  let paginationBlock = document.querySelector('.slider-pagination');
+  let currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+  let totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
+  const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
+  const BREAKPOINT_MOBILE = 767;
+
+  function initSwiper() {
+    swiper = new window.Swiper('.swiper-main', {
+      loop: true,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30,
+      centeredSlidesBounds: true,
+      pagination: {
+        el: document.querySelector('.slider-pagination'),
+        clickable: 'true',
+        renderBullet(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+
+      navigation: {
+        nextEl: '.slider-buttons__item--next',
+        prevEl: '.slider-buttons__item--prev',
+      },
+
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1023: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+        1169: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
+    });
+  }
+
+  function getBullets() {
+    let bullets;
+    if (paginationBlock) {
+      bullets = paginationBlock.children;
+    }
+    return bullets;
+  }
+
+  function setMobileTotalBullet(bullets) {
+    let totalBullets = bullets.length;
+
+    return totalBullets;
+  }
+
+  function setMobileCurrentBullet(bullets) {
+    let currentBullet;
+    Array.from(bullets).forEach((element) => {
+      if (element.classList.contains(ACTIVE_BULLET_CLASS)) {
+        currentBullet = +element.textContent;
+      }
+    });
+
+    return currentBullet;
+  }
+
+  function renderMobilePagination(bullets) {
+    totalDotsOut.textContent = setMobileTotalBullet(bullets);
+    currentDotOut.textContent = setMobileCurrentBullet(bullets);
+  }
+
+  function realIndexChangeHandler(bullets) {
+    swiper.on('transitionEnd', function () {
+      renderMobilePagination(bullets);
+    });
+  }
+
+  function setMobilePagination() {
+    let bullets = getBullets();
+    realIndexChangeHandler(bullets);
+  }
+
+  function breakpointChangeHandler() {
+    let viewport = document.documentElement.clientWidth;
+
+    if (viewport < BREAKPOINT_MOBILE) {
+      setMobilePagination();
+    }
+  }
+
+  function initMobilePagination() {
+    let bullets = getBullets();
+    renderMobilePagination(bullets);
+  }
+
+  function initSlider() {
+    if (sliderContainer) {
+      initSwiper();
+
+      if (swiper && paginationBlock && currentDotOut && totalDotsOut) {
+        initMobilePagination();
+        breakpointChangeHandler();
+        swiper.on('breakpoint', breakpointChangeHandler);
+      }
+    }
+  }
+
+  initSlider();
+})();
+
+'use strict';
+
+(function () {
+  const HEADER_MENU = 'header--menu';
+  const LOGO_MENU = 'logo--menu';
+  const SEARCH_FORM_MENU = 'search-form--menu';
+  const CART_LINK_MENU = 'cart-link--menu';
+  const NAVBAR_MENU = 'navbar--menu';
+  const NAVBAR_JS = 'navbar--js';
+  const BURGER_BTN_JS = 'burger-btn--js';
+  const BURGER_BTN_MENU = 'burger-btn--menu';
   let burgerBtn = document.querySelector('.burger-btn');
   let header = document.querySelector('.header');
   let logo = document.querySelector('.logo');
   let searchForm = document.querySelector('.search-form');
   let cartLink = document.querySelector('.cart-link');
-  let mainNav = document.querySelector('.main-nav');
-  const HEADER_MENU = 'header--menu';
-  const LOGO_MENU = 'logo--menu';
-  const SEARCH_FORM_MENU = 'search-form--menu';
-  const CART_LINK_MENU = 'cart-link--menu';
-  const MAIN_NAV_MENU = 'main-nav--menu';
-  const MAIN_NAV_JS = 'main-nav--js';
-  const BURGER_BTN_JS = 'burger-btn--js';
-  const BURGER_BTN_MENU = 'burger-btn--menu';
+  let navbar = document.querySelector('.navbar');
 
   function initMenu() {
     if (burgerBtn) {
@@ -214,8 +324,8 @@
       burgerBtn.classList.toggle(BURGER_BTN_JS);
     }
 
-    if (mainNav) {
-      mainNav.classList.toggle(MAIN_NAV_JS);
+    if (navbar) {
+      navbar.classList.toggle(NAVBAR_JS);
     }
 
     if (header) {
@@ -234,8 +344,8 @@
       searchForm.classList.toggle(SEARCH_FORM_MENU);
     }
 
-    if (mainNav) {
-      mainNav.classList.toggle(MAIN_NAV_MENU);
+    if (navbar) {
+      navbar.classList.toggle(NAVBAR_MENU);
     }
   }
 
@@ -262,8 +372,8 @@
       searchForm.classList.toggle(SEARCH_FORM_MENU);
     }
 
-    if (mainNav) {
-      mainNav.classList.toggle(MAIN_NAV_MENU);
+    if (navbar) {
+      navbar.classList.toggle(NAVBAR_MENU);
     }
   }
 })();
@@ -342,6 +452,7 @@
 
   function toggleClickHandler(evt) {
     evt.preventDefault();
+
     setModalActiveState();
   }
 
@@ -349,6 +460,7 @@
     if (modal) {
       modal.classList.toggle(MODAL_OPENED);
       pageBody.classList.toggle(BODY_OVERFLOW);
+
       inputFocused.focus();
     }
 
@@ -389,7 +501,6 @@
   function setModalInactiveState() {
     modal.classList.toggle(MODAL_OPENED);
     pageBody.classList.toggle(BODY_OVERFLOW);
-
     window.removeEventListener('keydown', escapeHAndler);
     closeLoginFormBtn.removeEventListener('click', closeBtnClickHandler);
     modal.removeEventListener('click', overlayClickHandler);
@@ -414,126 +525,4 @@
   }
 
   initSignupEmailLocalStorage();
-})();
-
-// eslint-disable-next-line strict
-'use strict';
-
-const Swiper = require('swiper/swiper-bundle');
-
-(function () {
-  let swiper;
-  let sliderContainer = document.querySelector('.swiper-container');
-  let paginationBlock = document.querySelector('.slider-pagination');
-  let currentDotOut = document.querySelector('.slider-mobile-pagination__current');
-  let totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
-  const ACTIVE_BULLET = 'swiper-pagination-bullet-active';
-  const BREAKPOINT_MOBILE = 767;
-
-  function initSwiper() {
-    swiper = new Swiper('.swiper-main', {
-      loop: true,
-      slidesPerGroup: 2,
-      slidesPerView: 2,
-      centeredSlides: false,
-      spaceBetween: 30,
-      centeredSlidesBounds: true,
-
-      pagination: {
-        el: document.querySelector('.slider-pagination'),
-        clickable: 'true',
-        renderBullet(index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-      },
-
-      navigation: {
-        nextEl: '.slider-buttons__item--next',
-        prevEl: '.slider-buttons__item--prev',
-      },
-
-      breakpoints: {
-        767: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
-        1023: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-        1169: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-        },
-      },
-    });
-  }
-
-  function getBullets() {
-    let bullets;
-    if (paginationBlock) {
-      bullets = paginationBlock.children;
-    }
-    return bullets;
-  }
-
-  function setMobileTotalBullet(bullets) {
-    let totalBullets = bullets.length;
-
-    return totalBullets;
-  }
-
-  function setMobileCurrentBullet(bullets) {
-    let currentBullet;
-    Array.from(bullets).forEach((element) => {
-      if (element.classList.contains(ACTIVE_BULLET)) {
-        currentBullet = +element.textContent;
-      }
-    });
-
-    return currentBullet;
-  }
-
-  function renderMobilePagination(bullets) {
-    totalDotsOut.textContent = setMobileTotalBullet(bullets);
-    currentDotOut.textContent = setMobileCurrentBullet(bullets);
-  }
-
-  function realIndexChangeHandler(bullets) {
-    swiper.on('transitionEnd', function () {
-      renderMobilePagination(bullets);
-    });
-  }
-
-  function setMobilePagination() {
-    let bullets = getBullets();
-    realIndexChangeHandler(bullets);
-  }
-
-  function breakpointChangeHandler() {
-    let viewport = document.documentElement.clientWidth;
-
-    if (viewport < BREAKPOINT_MOBILE) {
-      setMobilePagination();
-    }
-  }
-
-  function initMobilePagination() {
-    let bullets = getBullets();
-    renderMobilePagination(bullets);
-  }
-
-  function initSlider() {
-    if (sliderContainer) {
-      initSwiper();
-
-      if (swiper && paginationBlock && currentDotOut && totalDotsOut) {
-        initMobilePagination();
-        breakpointChangeHandler();
-        swiper.on('breakpoint', breakpointChangeHandler);
-      }
-    }
-  }
-
-  initSlider();
 })();
