@@ -1,7 +1,21 @@
-root: true
+{ "root": true,
 
-env:
-  browser: true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
 
-extends:
-  "htmlacademy/es5"
+  // "parserOptions": {
+  //   "sourceType": "module"
+  // },
+
+  "rules": {
+    "no-invalid-this": "off",
+    "no-unused-vars":"warn"
+  },  
+
+  "extends":
+    "htmlacademy/es5"
+
+}
