@@ -9,9 +9,9 @@
   flex-direction: column;
   align-items: center;
   width: 270px;
-  margin-right: 15px;
+  margin-right: calc((15 / 1366) * 100%);
   margin-bottom: 5px;
-  margin-left: 15px;
+  margin-left: calc((15 / 1366) * 100%);
 
   @media (max-width: $desktop-breakpoint) {
     width: 206px;
@@ -26,7 +26,7 @@
 .slider-page__item img {
   width: 270px;
   height: 272px;
-  margin-bottom: 17px;
+  margin-bottom: 25px;
   object-fit: cover;
 
   @media (max-width: $desktop-breakpoint) {
@@ -37,6 +37,6 @@
   @media (max-width: $tablet-breakpoint) {
     width: 130px;
     height: 136px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 }

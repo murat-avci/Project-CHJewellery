@@ -1,12 +1,13 @@
 .blog-item {
   display: flex;
   width: 100%;
+  height: auto;
   margin-bottom: 27px;
   text-align: center;
 
   @media (max-width: $desktop-breakpoint) {
     justify-content: center;
-    margin-bottom: 46px;
+    margin-bottom: 50px;
   }
 
   @media (max-width: $tablet-breakpoint) {
@@ -20,7 +21,7 @@
 .blog-item__text-wrapper {
   flex-shrink: 0;
   width: 285px;
-  max-height: 300px;
+  min-height: 300px;
   padding: 67px 60px;
   background-color: $blog-item-back;
 
@@ -31,7 +32,7 @@
 
   @media (max-width: $tablet-breakpoint) {
     width: 290px;
-    height: 256px;
+    min-height: 256px;
     margin-top: -3px;
     padding: 45px 60px;
   }
@@ -59,8 +60,8 @@
 
 .blog-item img {
   width: 285px;
-  height: 300px;
-
+  min-height: 300px;
+  height: auto;
   object-fit: cover;
 
   @media (max-width: $desktop-breakpoint) {
@@ -97,32 +98,33 @@
 
 .blog-item--large img {
   width: 570px;
-  height: 630px;
-
+  min-height: 630px;
+  height: auto;
 
   @media (max-width: $desktop-breakpoint) {
     width: 339px;
-    height: 300px;
+    min-height: 300px;
+    height: 100%;
   }
 
   @media (max-width: $tablet-breakpoint) {
     width: 290px;
-    height: 256px;
+    min-height: 256px;
   }
 }
 
 .blog-item--large .blog-item__text-wrapper {
   position: absolute;
   right: 0;
-  bottom: 3px;
+  bottom: 0;
   width: 285px;
-  height: 300px;
+  min-height: 300px;
 
   @media (max-width: $desktop-breakpoint) {
     position: static;
-
     width: 339px;
     max-height: 300px;
+    padding: 84px 101px 88px 100px;
   }
 
   @media (max-width: $tablet-breakpoint) {

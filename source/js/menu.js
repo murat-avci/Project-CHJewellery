@@ -10,13 +10,15 @@
   const BURGER_BTN_JS = 'burger-btn--js';
   const BURGER_BTN_MENU = 'burger-btn--menu';
   const IS_MENU_OPEN = 'is-menu-open';
+  const HEADER_MENU_OPEN = 'header-menu--open';
   const burgerBtn = document.querySelector('.burger-btn');
   const header = document.querySelector('.header');
   const logo = document.querySelector('.logo');
   const searchForm = document.querySelector('.search-form');
   const cartLink = document.querySelector('.cart-link');
   const navbar = document.querySelector('.navbar');
-  const bodyWrapper = document.querySelector('.body-wrapper');
+  const contentCover = document.querySelector('.content-cover');
+  const headerCover = document.querySelector('.header-cover');
 
   function initMenu() {
     if (burgerBtn) {
@@ -53,7 +55,8 @@
 
   function burgerBtnClickHandler() {
     if (burgerBtn) {
-      bodyWrapper.classList.toggle(IS_MENU_OPEN);
+      contentCover.classList.toggle(IS_MENU_OPEN);
+      headerCover.classList.toggle(HEADER_MENU_OPEN);
       burgerBtn.classList.toggle(BURGER_BTN_MENU);
     }
 

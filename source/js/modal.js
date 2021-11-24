@@ -20,7 +20,7 @@
   function setActiveElementArray(elements) {
     elements.forEach((element) => {
       let tag = element.tagName;
-      if (tag === 'A' || tag === 'INPUT' || tag === 'BUTTON' || tag === 'TEXTAREA') {
+      if (tag === 'a' || tag === 'input' || tag === 'button' || tag === 'textarea') {
         activeElements.push(element);
       }
     });
@@ -79,7 +79,11 @@
   function setModalActiveState() {
     if (modal) {
       modal.classList.toggle(MODAL_OPENED);
-      pageBody.classList.toggle(BODY_OVERFLOW);
+      if (modal.classList.contains(MODAL_OPENED)) {
+        pageBody.classList.add(BODY_OVERFLOW);
+      } else {
+        pageBody.classList.remove(BODY_OVERFLOW);
+      }
 
       inputFocused.focus();
     }

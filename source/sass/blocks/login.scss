@@ -62,6 +62,10 @@
   flex-direction: column;
   padding: 49px 45px 55px 45px;
 
+  &--index {
+    text-align: center;
+  }
+
   @media (max-width: $desktop-breakpoint) {
     padding: 49px 51px 55px 51px;
   }
@@ -129,6 +133,10 @@
   text-align: center;
 
   @include font_poppins(14px, 21px, 500, $font-dark-grey);
+
+  &--index {
+    @include font_poppins(18px, 30px, 500, $font-dark);
+  }
 }
 
 .login__signup-link span {

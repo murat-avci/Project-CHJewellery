@@ -5,8 +5,9 @@
 @import "mixins";
 @import "common";
 @import "fonts";
-@import "body-wrapper";
 @import "blocks/body";
+@import "blocks/window-blocker";
+@import "blocks/content-cover";
 @import "blocks/main";
 @import "blocks/container";
 @import "blocks/header";
@@ -49,7 +50,6 @@
 @import "blocks/filter-point";
 @import "blocks/price-slider";
 @import "blocks/slider-item";
-// slider-page extens slider-item !!!
 @import "blocks/slider-page";
 @import "blocks/catalog-slider-navigation";
 @import "blocks/swiper-pagination-bullet";

@@ -1,8 +1,8 @@
 .gallery__wrapper {
-  padding: 60px 0 100px 0;
+  padding: 60px 0 132px 0;
 
   @media (max-width: $desktop-breakpoint) {
-    padding: 43px 0 59px 0;
+    padding: 43px 0 78px 0;
   }
 
   @media (max-width: $tablet-breakpoint) {
@@ -42,11 +42,6 @@
 
 .gallery__heading a {
   display: inline-block;
-  max-width: 74px;
   margin: 0 0 20px 0;
   vertical-align: top;
-
-  @media (max-width: $desktop-breakpoint) {
-    max-width: initial;
-  }
 }

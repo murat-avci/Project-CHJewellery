@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left" viewBox="0 0 37 17">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37 8.5H1m0 0l9.27 7.5M1 8.5L10.27 1"/>
-</symbol><symbol id="icon-arrow-right" viewBox="0 0 37 17">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M0 8.5h36m0 0L26.73 1M36 8.5L26.73 16"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left" viewBox="0 0 30 11">
+<path d="M30 5.5L1 5.5M1 5.5L6.48649 10M1 5.5L6.48649 1" stroke="#A87B62"/>
+</symbol><symbol id="icon-arrow-right" viewBox="0 0 30 11">
+<path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10" stroke=""/>
 </symbol><symbol id="icon-burger" viewBox="0 0 25 18">
   <path fill="none" stroke-width="2" d="M0 1h25M0 9h25M0 17h25"/>
 </symbol><symbol id="icon-cart" viewBox="0 0 20 18">

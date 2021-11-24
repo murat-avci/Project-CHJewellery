@@ -1,4 +1,3 @@
-
 .slider-item {
   width: 270px;
   padding-bottom: 10px;
@@ -15,7 +14,7 @@
 .slider-item img {
   width: 270px;
   height: 284px;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   object-fit: cover;
 
   @media (max-width: $desktop-breakpoint) {
@@ -26,15 +25,19 @@
   @media (max-width: $tablet-breakpoint) {
     width: 130px;
     height: 136px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 }
 
 .slider-item h3 {
-  margin: 0 0 7px 0;
+  margin: 0 0 8px 0;
   text-align: center;
 
   @include font_poppins(16px, 21px, 500, $font-dark);
+}
+
+.slider-item--second h3 {
+  margin-left: 0;
 }
 
 .slider-item:focus,

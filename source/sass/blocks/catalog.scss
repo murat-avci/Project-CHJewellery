@@ -28,12 +28,12 @@
 }
 
 .catalog__slider-container {
-  width: 75.4%;
+  width: calc((1050  / 1366) * 100%);
   margin-right: 0;
   margin-left: 0;
 
   @media (max-width: $desktop-breakpoint) {
-    width: 100%;
+    width: calc((678 / 768) * 100%);
     margin-right: auto;
     margin-left: auto;
   }
