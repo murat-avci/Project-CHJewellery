@@ -24,7 +24,7 @@
         <header class="header header--menu">
           <div class=" container">
             <div class="header__wrapper">
-              <button class="header__btn burger-btn" type="button" aria-label="menu button">
+              <button class="header__btn burger-btn" type="button" aria-label="menu button" tabindex="1">
                 <svg width="25" height="18" role="img">
                   <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
                 </svg>
@@ -35,16 +35,16 @@
                     <use xlink:href="img/sprite_auto.svg#icon-search"></use>
                   </svg>
                 </label>
-                <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
+                <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search" tabindex="2">
               </form>
-              <a href="main.html" class="header__logo logo logo--menu">
+              <a href="main.html" class="header__logo logo logo--menu" tabindex="3">
                 <svg width="66" height="66" role="img">
                   <use xlink:href="img/sprite_auto.svg#logo"></use>
                 </svg>
               </a>
               <div class="header__link-wrapper user-link">
-                <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" aria-label="login form link">Login</a>
-                <a class="user-link__item cart-link cart-link--menu" href="#" aria-label="cart link">
+                <a class="user-link__item login-link login-link-js" href="login.html" target="_blank" tabindex="4" aria-label="login form link">Login</a>
+                <a class="user-link__item cart-link cart-link--menu" href="#" tabindex="5" aria-label="cart link">
                   <div>
                     Cart&nbsp;
                     <span class="cart-link__counter">0</span>
@@ -58,33 +58,33 @@
             <nav class="header__navbar navbar navbar--menu">
               <ul class="navbar__list nav-list">
                 <li class="nav-list__item">
-                  <a href="main.html#new">What’s new</a>
+                  <a href="main.html#new" tabindex="6">What’s new</a>
                 </li>
                 <li class="nav-list__item">
-                  <a href="#">Chokers</a>
+                  <a href="#" tabindex="7">Chokers</a>
                 </li>
                 <li class="nav-list__item">
-                  <a href="#">Necklaces</a>
+                  <a href="#" tabindex="8">Necklaces</a>
                 </li>
                 <li class="nav-list__item">
-                  <a href="#">Rings</a>
+                  <a href="#" tabindex="9">Rings</a>
                 </li>
                 <li class="nav-list__item">
-                  <a href="#">Earrings</a>
+                  <a href="#" tabindex="10">Earrings</a>
                 </li>
               </ul>
               <ul class="navbar__list expanded-nav-list">
                 <li class="expanded-nav-list__item">
-                  <a href="#">About CH</a>
+                  <a href="#" tabindex="11">About CH</a>
                 </li>
                 <li class="expanded-nav-list__item">
-                  <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+                  <a href="#" tabindex="12">Stores&nbsp;&#38;&nbsp;Hours</a>
                 </li>
                 <li class="expanded-nav-list__item">
-                  <a href="#">Contact Us</a>
+                  <a href="#" tabindex="13">Contact Us</a>
                 </li>
                 <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
-                  <a href="login.html" target="_blank" aria-label="login form link">Login</a>
+                  <a href="login.html" target="_blank" aria-label="login form link" tabindex="14">Login</a>
                 </li>
               </ul>
             </nav>
@@ -119,18 +119,18 @@
           <section class="catalog">
             <h2 class="visually-hidden">Jewellery product showcase</h2>
             <div class="container">
-              <a class="catalog__filter-link" href="filter.html" aria-label="filter form link">Filter</a>
+              <a class="catalog__filter-link" href="filter.html" aria-label="filter form link" tabindex="15">Filter</a>
             </div>
             <div class="container catalog__wrapper">
               <div class="filter">
-                <button class="filter__close" type="button" aria-label="filter close button">
+                <button class="filter__close" type="button" aria-label="filter close button" tabindex="16">
                   <svg width="32" height="32" role="img">
                     <use xlink:href="img/sprite_auto.svg#icon-close-round"></use>
                   </svg>
                 </button>
                 <form class="filter__form" action="#" method="POST">
                   <fieldset class="filter__field filter-field">
-                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button">
+                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button" tabindex="17">
                       <span>
                         Product
                       </span>
@@ -158,7 +158,7 @@
                     </div>
                   </fieldset>
                   <fieldset class="filter__field filter-field">
-                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button">
+                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button" tabindex="18">
                       <span>
                         Material
                       </span>
@@ -178,7 +178,7 @@
                     </div>
                   </fieldset>
                   <fieldset class="filter__field filter-field">
-                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button">
+                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button" tabindex="19">
                       <span>
                         Collection
                       </span>
@@ -198,7 +198,7 @@
                     </div>
                   </fieldset>
                   <fieldset class="filter__field filter-field">
-                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button">
+                    <button class="filter-field__toggle" type="button" aria-label="filter toggle button" tabindex="20">
                       <span>
                         Price
                       </span>
@@ -226,8 +226,8 @@
                     </div>
                   </fieldset>
                   <div class="filter__btns">
-                    <button class="filter__btn filter__btn--submit" type="submit" aria-label="filter submit button">Apply</button>
-                    <button class="filter__btn filter__btn--reset" type="reset" aria-label="filter reset button">Clear All</button>
+                    <button class="filter__btn filter__btn--submit" type="submit" aria-label="filter submit button" tabindex="21">Apply</button>
+                    <button class="filter__btn filter__btn--reset" type="reset" aria-label="filter reset button" tabindex="22">Clear All</button>
                   </div>
                 </form>
               </div>
@@ -235,7 +235,7 @@
                 <div class="swiper-container catalog__slider">
                   <div class="swiper-wrapper">
                     <div class="catalog__slider-page slider-page swiper-slide">
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="23">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
@@ -252,7 +252,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="24">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-choker-gold-bead_desk@1x.webp 1x, img/cat_black-choker-gold-bead_desk@2x.webp 2x">
@@ -269,7 +269,7 @@
                           <span>55</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="24">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
@@ -286,7 +286,7 @@
                           <span>155</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="25">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
@@ -303,7 +303,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="26">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
@@ -320,7 +320,7 @@
                           <span>75</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="27">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
@@ -337,7 +337,7 @@
                           <span>135</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="28">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-leather-choker-necklace_desk@1x.webp 1x, img/cat_black-leather-choker-necklace_desk@2x.webp 2x">
@@ -354,7 +354,7 @@
                           <span>85</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="29">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
@@ -371,7 +371,7 @@
                           <span>145</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="30">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
@@ -388,7 +388,7 @@
                           <span>95</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="31">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
@@ -405,7 +405,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="32">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
@@ -422,7 +422,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="33">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
@@ -441,7 +441,7 @@
                       </a>
                     </div>
                     <div class="catalog__slider-page slider-page swiper-slide">
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="34">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
@@ -458,7 +458,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="35">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-choker-gold-bead_desk@1x.webp 1x, img/cat_black-choker-gold-bead_desk@2x.webp 2x">
@@ -475,7 +475,7 @@
                           <span>55</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="36">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
@@ -492,7 +492,7 @@
                           <span>155</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="37">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
@@ -509,7 +509,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="38">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
@@ -526,7 +526,7 @@
                           <span>75</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="39">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
@@ -543,7 +543,7 @@
                           <span>135</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="40">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-leather-choker-necklace_desk@1x.webp 1x, img/cat_black-leather-choker-necklace_desk@2x.webp 2x">
@@ -560,7 +560,7 @@
                           <span>85</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="41">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
@@ -577,7 +577,7 @@
                           <span>145</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="42">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
@@ -594,7 +594,7 @@
                           <span>95</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="43">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
@@ -611,7 +611,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="44">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
@@ -628,7 +628,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="45">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
@@ -647,7 +647,7 @@
                       </a>
                     </div>
                     <div class="catalog__slider-page slider-page swiper-slide">
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="46">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
@@ -664,7 +664,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="47">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-choker-gold-bead_desk@1x.webp 1x, img/cat_black-choker-gold-bead_desk@2x.webp 2x">
@@ -681,7 +681,7 @@
                           <span>55</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="48">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
@@ -698,7 +698,7 @@
                           <span>155</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="49">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
@@ -715,7 +715,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="50">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
@@ -732,7 +732,7 @@
                           <span>75</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="51">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
@@ -749,7 +749,7 @@
                           <span>135</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="52">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-leather-choker-necklace_desk@1x.webp 1x, img/cat_black-leather-choker-necklace_desk@2x.webp 2x">
@@ -766,7 +766,7 @@
                           <span>85</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="53">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
@@ -783,7 +783,7 @@
                           <span>145</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="54">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
@@ -800,7 +800,7 @@
                           <span>95</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="55">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
@@ -817,7 +817,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="56">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
@@ -834,7 +834,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="57">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
@@ -853,7 +853,7 @@
                       </a>
                     </div>
                     <div class="catalog__slider-page slider-page swiper-slide">
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="58">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
@@ -870,7 +870,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="59">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-choker-gold-bead_desk@1x.webp 1x, img/cat_black-choker-gold-bead_desk@2x.webp 2x">
@@ -887,7 +887,7 @@
                           <span>55</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="60">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
@@ -904,7 +904,7 @@
                           <span>155</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="61">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
@@ -921,7 +921,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="62">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
@@ -938,7 +938,7 @@
                           <span>75</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="63">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
@@ -955,7 +955,7 @@
                           <span>135</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="64">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-leather-choker-necklace_desk@1x.webp 1x, img/cat_black-leather-choker-necklace_desk@2x.webp 2x">
@@ -972,7 +972,7 @@
                           <span>85</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="65">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
@@ -989,7 +989,7 @@
                           <span>145</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="66">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
@@ -1006,7 +1006,7 @@
                           <span>95</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="67">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
@@ -1023,7 +1023,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="68">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
@@ -1040,7 +1040,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="69">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
@@ -1059,7 +1059,7 @@
                       </a>
                     </div>
                     <div class="catalog__slider-page slider-page swiper-slide">
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="70">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
@@ -1076,7 +1076,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="71">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-choker-gold-bead_desk@1x.webp 1x, img/cat_black-choker-gold-bead_desk@2x.webp 2x">
@@ -1093,7 +1093,7 @@
                           <span>55</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="72">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
@@ -1110,7 +1110,7 @@
                           <span>155</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="73">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
@@ -1127,7 +1127,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="74">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
@@ -1144,7 +1144,7 @@
                           <span>75</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="75">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
@@ -1161,7 +1161,7 @@
                           <span>135</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="76">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-leather-choker-necklace_desk@1x.webp 1x, img/cat_black-leather-choker-necklace_desk@2x.webp 2x">
@@ -1178,7 +1178,7 @@
                           <span>85</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="77">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
@@ -1195,7 +1195,7 @@
                           <span>145</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="78">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
@@ -1212,7 +1212,7 @@
                           <span>95</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="79">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
@@ -1229,7 +1229,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="80">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
@@ -1246,7 +1246,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="81">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
@@ -1265,7 +1265,7 @@
                       </a>
                     </div>
                     <div class="catalog__slider-page slider-page swiper-slide">
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="81">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
@@ -1282,7 +1282,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="82">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-choker-gold-bead_desk@1x.webp 1x, img/cat_black-choker-gold-bead_desk@2x.webp 2x">
@@ -1299,7 +1299,7 @@
                           <span>55</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="83">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
@@ -1316,7 +1316,7 @@
                           <span>155</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="84">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
@@ -1333,7 +1333,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="85">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
@@ -1350,7 +1350,7 @@
                           <span>75</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="86">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
@@ -1367,7 +1367,7 @@
                           <span>135</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="87">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_black-leather-choker-necklace_desk@1x.webp 1x, img/cat_black-leather-choker-necklace_desk@2x.webp 2x">
@@ -1384,7 +1384,7 @@
                           <span>85</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="88">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
@@ -1401,7 +1401,7 @@
                           <span>145</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="89">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
@@ -1418,7 +1418,7 @@
                           <span>95</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="90">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
@@ -1435,7 +1435,7 @@
                           <span>115</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="91">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
@@ -1452,7 +1452,7 @@
                           <span>105</span>
                         </p>
                       </a>
-                      <a href="#" class="slider-item slider-page__item">
+                      <a href="#" class="slider-item slider-page__item" tabindex="92">
                         <picture>
                           <!-- 1х: 270px; 2x: 540px -->
                           <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
@@ -1473,11 +1473,11 @@
                   </div>
                 </div>
                 <div class="catalog__slider-navigation catalog-slider-navigation">
-                  <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--prev" type="button" aria-label="Slider previous button">
+                  <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--prev" type="button" aria-label="Slider previous button" tabindex="93">
                     Previous
                   </button>
                   <div class="slider-pagination catalog-slider-navigation__pagination"></div>
-                  <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--next" type="button" aria-label="Slider next button">
+                  <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--next" type="button" aria-label="Slider next button" tabindex="94">
                     Next
                   </button>
                 </div>
@@ -1496,9 +1496,9 @@
               </p>
               <form class="signup__form" action="#" method="POST">
                 <label for="usermail">
-                  <input type="email" name="usermail" id="usermail" placeholder="Your E-mail" required>
+                  <input type="email" name="usermail" id="usermail" placeholder="Your E-mail"  tabindex="95" required>
                 </label>
-                <button class="signup__btn" type="submit" aria-label="signup submit button">
+                <button class="signup__btn" type="submit" aria-label="signup submit button"  tabindex="96">
                   Sign Up
                   <svg class="signup__icon" width="37" height="17" role="img">
                     <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
@@ -1510,36 +1510,36 @@
               <h2 class="visually-hidden">Terms, Conditions and About Jewellery Shop</h2>
               <ul class="terms__list">
                 <li class="terms__item">
-                  <a href="#">Ordering&nbsp;&#38;&nbsp;Payment</a>
+                  <a href="#"  tabindex="97">Ordering&nbsp;&#38;&nbsp;Payment</a>
                 </li>
                 <li class="terms__item">
-                  <a href="#">Terms&nbsp;&#38;&nbsp;Conditions</a>
+                  <a href="#" tabindex="98">Terms&nbsp;&#38;&nbsp;Conditions</a>
                 </li>
                 <li class="terms__item">
-                  <a href="#">Returns&nbsp;&#38;&nbsp;Exchanges</a>
+                  <a href="#" tabindex="99">Returns&nbsp;&#38;&nbsp;Exchanges</a>
                 </li>
                 <li class="terms__item">
-                  <a href="#">Delivery</a>
+                  <a href="#" tabindex="100">Delivery</a>
                 </li>
               </ul>
               <ul class="terms__list">
                 <li class="terms__item">
-                  <a href="#">About CH</a>
+                  <a href="#" tabindex="101">About CH</a>
                 </li>
                 <li class="terms__item">
-                  <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+                  <a href="#" tabindex="102">Stores&nbsp;&#38;&nbsp;Hours</a>
                 </li>
                 <li class="terms__item">
-                  <a href="#">Jobs</a>
+                  <a href="#" tabindex="103">Jobs</a>
                 </li>
                 <li class="terms__item">
-                  <a href="#">Contact Us</a>
+                  <a href="#" tabindex="104">Contact Us</a>
                 </li>
               </ul>
             </section>
             <ul class="socials">
               <li class="socials__item">
-                <a href="#" aria-label="facebook link">
+                <a href="#" aria-label="facebook link" tabindex="105">
                   <div class="socials__icon socials__icon--fb">
                     <svg width="8" height="15" role="img">
                       <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
@@ -1549,7 +1549,7 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a href="#" aria-label="instagram link">
+                <a href="#" aria-label="instagram link" tabindex="106">
                   <div class="socials__icon socials__icon--in">
                     <svg width="15" height="15" role="img">
                       <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
@@ -1559,7 +1559,7 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a href="#" aria-label="pinterest link">
+                <a href="#" aria-label="pinterest link" tabindex="107">
                   <div class="socials__icon socials__icon--pn">
                     <svg width="16" height="15" role="img">
                       <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
@@ -1569,7 +1569,7 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a href="#" aria-label="twitter link">
+                <a href="#" aria-label="twitter link" tabindex="108">
                   <div class="socials__icon socials__icon--tw">
                     <svg width="15" height="13" role="img">
                       <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
@@ -1600,18 +1600,18 @@
             <h2>Log In</h2>
             <form class="login__form" action="#" method="post">
               <label for="useremail">
-                <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required>
+                <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required tabindex="109">
               </label>
               <label for="userpassword">
-                <input type="password" id="userpassword" name="userpassword" placeholder="Password" aria-label="Input your password" required>
+                <input type="password" id="userpassword" name="userpassword" placeholder="Password" aria-label="Input your password" required tabindex="110">
               </label>
-              <a href="#" class="login__restore-link" aria-label="login restore link">Forgot your password?</a>
+              <a href="#" class="login__restore-link" aria-label="login restore link"tabindex="111">Forgot your password?</a>
               <button class="login__btn" type="submit" aria-label="login submit button">Log In</button>
             </form>
-            <a class="login__signup-link" href="#" aria-label="login signup link"> Don’t have an account?<span>&nbsp;&nbsp;Sign up</span>
+            <a class="login__signup-link" href="#" aria-label="login signup link" tabindex="112"> Don’t have an account?<span>&nbsp;&nbsp;Sign up</span>
             </a>
           </div>
-          <button type="button" class="login__close" aria-label="Login close button">
+          <button type="button" class="login__close" aria-label="Login close button" tabindex="113">
             <svg width="14" height="14" role="img">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
