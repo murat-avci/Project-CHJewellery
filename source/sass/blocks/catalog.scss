@@ -21,21 +21,24 @@
 
   @media (max-width: $desktop-breakpoint) {
     position: relative;
-
     flex-direction: column;
     align-items: center;
   }
 }
 
 .catalog__slider-container {
-  width: calc((1050  / 1366) * 100%);
-  margin-right: 0;
-  margin-left: 0;
+  width: calc((870  / 1366) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
 
   @media (max-width: $desktop-breakpoint) {
     width: calc((678 / 768) * 100%);
-    margin-right: auto;
-    margin-left: auto;
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    min-width: 290px;
+    width: 100%;
   }
 }
 

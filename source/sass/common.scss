@@ -102,4 +102,9 @@ a {
 
 .overflow--hidden {
   overflow: hidden;
+  width: 100%;
+}
+
+*:focus:not(.focus-visible) {
+  outline: auto;
 }

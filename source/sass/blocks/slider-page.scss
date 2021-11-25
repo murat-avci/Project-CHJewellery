@@ -8,24 +8,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 270px;
+  width: calc((270 / 870) * 100%);
+  height: auto;
   margin-right: calc((15 / 1366) * 100%);
   margin-bottom: 5px;
   margin-left: calc((15 / 1366) * 100%);
 
   @media (max-width: $desktop-breakpoint) {
-    width: 206px;
+    width: calc((206 / 678) * 100%);
   }
 
   @media (max-width: $tablet-breakpoint) {
-    width: 130px;
+    width: calc((130 / 290) * 100%);
     margin-bottom: 10px;
   }
 }
 
 .slider-page__item img {
-  width: 270px;
-  height: 272px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 25px;
   object-fit: cover;
 
@@ -35,8 +36,9 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    width: 130px;
-    height: 136px;
+    min-width: 130px;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
   }
 }

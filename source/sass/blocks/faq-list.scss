@@ -14,6 +14,7 @@
 .faq-list__btn {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   width: 100%;
   margin: 0;
   padding: 43px 48px 44px 43px;
@@ -28,11 +29,12 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    padding: 16px 22px 21px 24px;
+    padding: 17px 22px 20px 24px;
   }
 }
 
 .faq-list__btn span {
+  display: inline-block;
   max-width: 70%;
   text-align: left;
 
@@ -97,6 +99,7 @@
   @media (max-width: $tablet-breakpoint) {
     margin-top: -7px;
     padding-bottom: 14px;
+    padding-right: 20px;
   }
 }
 

@@ -65,6 +65,8 @@
 
   @media (max-width: $tablet-breakpoint) {
     letter-spacing: 1.1px;
+    text-align: center;
+    margin: 0 auto -7px;
 
     @include font_cormorant(38px, 49px, 700, $basic-light);
   }

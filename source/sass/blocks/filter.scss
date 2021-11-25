@@ -120,12 +120,12 @@
 
 .filter--opened {
   @media (max-width: $desktop-breakpoint) {
-    position: absolute;
-    top: -20px;
+    position: fixed;
+    top: 50%;
     left: 50%;
     z-index: 20;
     display: block;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     filter: drop-shadow(0 4px 4px $filter-shadow);
   }
 }
