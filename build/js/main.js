@@ -295,8 +295,8 @@
           slidesPerGroup: 2,
         },
         1023: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
         },
         1024: {
           slidesPerView: 4,

@@ -7,7 +7,7 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    width: calc((130 / 290) * 100%);
+    max-width: 130px;
   }
 }
 

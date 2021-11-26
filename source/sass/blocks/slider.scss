@@ -3,10 +3,12 @@
 
   @media (max-width: $desktop-breakpoint) {
     padding-bottom: 43px;
+    max-width: 933px;
   }
 
   @media (max-width: $tablet-breakpoint) {
     padding-bottom: 48px;
+    max-width: 290px;
   }
 }
 
