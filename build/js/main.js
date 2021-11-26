@@ -56,12 +56,11 @@
 
 (function () {
   const pageBody = document.querySelector('body');
-  const filterBlock = document.querySelector('.filter');
-  const closeFilterBtn = document.querySelector('.filter__close');
+  const filterBlock = document.querySelector('.popup-filter');
+  const closeFilterBtn = document.querySelector('.popup-filter__close');
   const openFilterBtn = document.querySelector('.catalog__filter-link');
-  const windowBlocker = document.querySelector('.window-blocker');
-  const FILTER_OPENED = 'filter--opened';
-  const WINDOW_OPENED = 'window--opened';
+  const POPUP_FILTER_OPENED = 'popup-filter--opened';
+  // const FILTER_OPENED = 'filter--opened';
   const BODY_OVERFLOW = 'body--overflow';
   let activeElements = [];
   let maxTabIndexNum;
@@ -129,13 +128,11 @@
 
   function setFilterActiveState() {
     if (filterBlock && openFilterBtn) {
-      filterBlock.classList.toggle(FILTER_OPENED);
-      if (filterBlock.classList.contains(FILTER_OPENED)) {
+      filterBlock.classList.toggle(POPUP_FILTER_OPENED);
+      if (filterBlock.classList.contains(POPUP_FILTER_OPENED)) {
         pageBody.classList.add(BODY_OVERFLOW);
-        windowBlocker.classList.add(WINDOW_OPENED);
       } else {
         pageBody.classList.remove(BODY_OVERFLOW);
-        windowBlocker.classList.remove(WINDOW_OPENED);
       }
     }
 
@@ -160,12 +157,11 @@
   }
 
   function setFilterInactiveState() {
-    filterBlock.classList.toggle(FILTER_OPENED);
+    filterBlock.classList.toggle(POPUP_FILTER_OPENED);
     pageBody.classList.toggle(BODY_OVERFLOW);
     window.removeEventListener('keydown', escapeHAndler);
     closeFilterBtn.removeEventListener('click', closeFilterBtnHandler);
     resetTabindexActiveElements();
-    windowBlocker.classList.remove(WINDOW_OPENED);
   }
 })();
 
@@ -590,6 +586,38 @@
     closeLoginFormBtn.removeEventListener('click', closeBtnClickHandler);
     modal.removeEventListener('click', overlayClickHandler);
     resetTabindexActiveElements();
+  }
+})();
+
+'use strict';
+
+(function () {
+  const popupAccordion = document.querySelector('.popup-filter__form');
+  const FIELD_CLASS = 'filter-field';
+  const TOGGLE_CLASS = 'filter-field__toggle';
+  const FIELD_CLOSED_CLASS = 'filter-field--closed';
+
+  if (popupAccordion) {
+    const accordionToggles = popupAccordion.querySelectorAll('.' + TOGGLE_CLASS);
+    const accordionFields = popupAccordion.querySelectorAll('.' + FIELD_CLASS);
+    if (accordionToggles && accordionFields) {
+      initAccordion(accordionFields, accordionToggles);
+    }
+  }
+
+  function initAccordion(fields, toggles) {
+    fields.forEach((elem) => {
+      elem.classList.toggle(FIELD_CLOSED_CLASS);
+    });
+
+    toggles.forEach((elem) => {
+      elem.addEventListener('click', toggleClickHandler);
+    });
+  }
+
+  function toggleClickHandler() {
+    let currentField = this.parentNode;
+    currentField.classList.toggle(FIELD_CLOSED_CLASS);
   }
 })();
 
