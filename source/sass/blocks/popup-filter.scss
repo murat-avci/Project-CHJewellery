@@ -1,14 +1,14 @@
 .popup-filter {
   display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba($color: $basic-dark, $alpha: 0.8);
-	top: 0;
-	left: 0;
-	z-index: 150;
-	overflow-y: auto;
-	overflow-x: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $basic-dark, $alpha: 0.8);
+  top: 0;
+  left: 0;
+  z-index: 150;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .popup-filter--opened {
@@ -16,15 +16,15 @@
 }
 
 .popup-filter__body {
-	min-height: 841px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  min-height: 841px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .popup-filter__content {
   position: relative;
-	background-color: $basic-light;
+  background-color: $basic-light;
 
   @media (max-width: $desktop-breakpoint) {
     max-width: 442px;
@@ -41,30 +41,30 @@
 }
 
 .popup-filter__form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup-filter__close {
-	display: none;
-	width: 32px;
-	height: 32px;
-	padding: 0;
-	background-color: transparent;
-	border: none;
-	border-radius: 50%;
-  
-	@media (max-width: $desktop-breakpoint) {
-	  position: absolute;
-	  top: -16px;
-	  right: -16px;
-	  display: block;
-	}
-  
-	@media (max-width: $tablet-breakpoint) {
-	  top: -17px;
-	  right: -10px;
-	}
+  display: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+
+  @media (max-width: $desktop-breakpoint) {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    display: block;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    top: -17px;
+    right: -10px;
+  }
 }
 
 .popup-filter__close svg {
@@ -72,4 +72,69 @@
   height: 32px;
   cursor: pointer;
   fill: $filter-close-btn;
+}
+
+.popup-filter__btns {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 0 20px;
+  }
+}
+
+.popup-filter__btn {
+  padding: 24px 25px;
+}
+
+.popup-filter__btn--submit {
+  margin-top: 34px;
+  background-color: $filter-btn;
+  border: none;
+
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: 38px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 28px;
+  }
+}
+
+.popup-filter__btn--submit:hover,
+.popup-filter__btn--submit:focus {
+  outline: 2px solid $hover-outline-light;
+  outline-offset: -3 * $hover-outline-offset;
+}
+
+.popup-filter__btn--submit:active {
+  opacity: $header-element-active-opacity;
+}
+
+.popup-filter__btn--reset {
+  margin-top: 23px;
+  background-color: transparent;
+  border: 1px solid $filter-border;
+
+  @include font_poppins(16px, 21px, 500, $font-dark);
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 19px;
+  }
+}
+
+.popup-filter__btn--reset:hover,
+.popup-filter__btn--reset:focus {
+  outline: 2px solid $hover-outline;
+  outline-offset: -3 * $hover-outline-offset;
+}
+
+.popup-filter__btn--reset:active {
+  opacity: $header-element-active-opacity;
+}
+
+.filter button {
+  cursor: pointer;
 }
